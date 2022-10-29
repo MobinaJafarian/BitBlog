@@ -27,22 +27,23 @@
                         redirect('auth/login.php');
                     }
                     else{
-                        $error = 'این ایمیل تکراری است';
+                        $error = 'This email already exists';
+                    
                     }
                 }
                 else{
-                    $error = 'رمز عبور باید بیش از ۵ کاراکتر باشد';
+                    $error ='Password must be more than 5 characters';
                 }
 
             }
             else{
-                $error = 'رمز عبور با تاییدیه مطابقت ندارد';
+                $error = 'Password does not match the certificate';
             }
 
          }
          else{
              if(!empty($_POST))
-             $error = 'تمامی فیلد ها اجباری میباشند';
+             $error = 'All fields are required';
          }
 ?>
 <!DOCTYPE html>
@@ -51,7 +52,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PHP tutorial</title>
+    <title>Bit Blog</title>
     <link rel="stylesheet" href="<?= asset('assets/css/bootstrap.min.css') ?>" media="all" type="text/css">
     <link rel="stylesheet" href="<?= asset('assets/css/style.css') ?>" media="all" type="text/css">
 </head>
@@ -61,7 +62,7 @@
 
         <section style="height: 100vh; background-color: #138496;" class="d-flex justify-content-center align-items-center">
             <section style="width: 20rem;">
-                <h1 class="bg-warning rounded-top px-2 mb-0 py-3 h5">PHP Tutorial login</h1>
+                <h1 class="bg-warning rounded-top px-2 mb-0 py-3 h5">Bit Blog Register</h1>
                 <section class="bg-light my-0 px-2">
                     <small class="text-danger"><?php if ($error !== '') echo $error; ?></small>
             </section>
@@ -88,7 +89,7 @@
                     </section>
                     <section class="mt-4 mb-2 d-flex justify-content-between">
                         <input type="submit" class="btn btn-success btn-sm" value="register">
-                        <a class="" href="">login</a>
+                        <a class="" href="<?= url('auth/login.php') ?>">Login</a>
                     </section>
                 </form>
             </section>
