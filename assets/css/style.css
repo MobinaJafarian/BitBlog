@@ -1,0 +1,52 @@
+
+.bg-red{
+    background-color: rgb(210, 0, 1);
+    box-shadow: 0px 3px 4px #aaaaaa, 0px 4px 8px #ededed;
+}
+
+
+.nav-link{
+    color: #dedede!important;
+}
+.nav-link:hover{
+    color: #fefefe!important;
+}
+.active > .nav-link{
+    color: #ffffff!important;
+}
+.bg-article{
+    background-color: #dedede;
+}
+.date-time{
+    color: #999;
+    font-size: .8rem;
+}
+
+
+/*panel*/
+.sidebar{
+    min-height: Calc(100vh - 3.5rem);
+    background-color: #ededed;
+    box-shadow: 3px 5px 4px #cccccc, 5px 7px 8px #ededed;
+    padding-top: 1rem;
+}
+
+.sidebar-link{
+
+}
+.sidebar-link > a{
+    text-decoration: none;
+    display: block;
+    color: #666666;
+    border-left: 3px solid rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);
+    padding: .3rem .5rem;
+    font-size: 1.2rem;
+    transition: all .4s;
+}
+
+.sidebar-link > a:hover{
+    border-left: 3px solid rgba( 210, 0, 1, 1);
+    background-color: rgba(0,0,0,.2);
+    transition: all .4s;
+}
