@@ -96,5 +96,11 @@
 
 <script src="<?= asset('assets/js/jquery.min.js') ?>"></script>
 <script src="<?= asset('assets/js/bootstrap.min.js') ?>"></script>
+
+<script src="<?= asset('assets/ckeditor/ckeditor.js') ?>"></script>
+<script type="text/javascript">
+    CKEDITOR.replace('body')
+</script>
+
 </body>
 </html>

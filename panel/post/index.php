@@ -51,9 +51,9 @@
                          $statement = $pdo->prepare($query);
                          $statement->execute();
                          $posts = $statement->fetchAll();
-                         foreach ($posts as $post) { ?>
+                         foreach ($posts as $key => $post) { ?>
                             <tr>
-                                <td><?= $post->id ?></td>
+                                <td><?= $key += 1 ?></td>
                                 <td><img style="width: 90px;" src="<?= asset( $post->image) ?>"></td>
                                 <td><?= $post->title ?></td>
                                 <td><?= $post->category_name ?></td>
@@ -66,9 +66,9 @@
                                       <?php } ?>
                                    </td>
                                 <td>
-                                    <a href="<?= url('panel/post/change-status.php?post_id=' . $post->id) ?>" class="btn btn-warning btn-sm">Change status</a>
-                                    <a href="<?= url('panel/post/edit.php?post_id=' . $post->id) ?>" class="btn btn-info btn-sm">Edit</a>
-                                    <a href="<?= url('panel/post/delete.php?post_id=' . $post->id) ?>" class="btn btn-danger btn-sm">Delete</a>
+                                    <a href="<?= url('panel/post/change-status.php?post_id=' . $post->id) ?>" class="btn btn-block btn-warning btn-sm">Change status</a>
+                                    <a href="<?= url('panel/post/edit.php?post_id=' . $post->id) ?>" class="btn btn-block btn-info btn-sm">Edit</a>
+                                    <a href="<?= url('panel/post/delete.php?post_id=' . $post->id) ?>" class="btn btn-block btn-danger btn-sm">Delete</a>
                                 </td>
                             </tr>
                             <?php } ?>

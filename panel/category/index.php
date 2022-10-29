@@ -48,10 +48,10 @@
                          $statement->execute();
                          $categories = $statement->fetchAll();
 
-                         foreach ($categories as $category) { ?>
+                         foreach ($categories as $key => $category) { ?>
                      
                             <tr>
-                                <td> <?= $category->id ?> </td>
+                                <td> <?= $key += 1 ?> </td>
                                 <td> <?= $category->name ?> </td>
                                 <td>
                                     <a href="<?= url('panel/category/edit.php?cat_id=' . $category->id) ?>" class="btn btn-info btn-sm">Edit</a>
