@@ -1,7 +1,7 @@
 <?php
 
 //config
-define('BASE_URL', 'http://localhost/php-tutorial/');
+define('BASE_URL', 'http://localhost/BitBlog/');
 
 function redirect($url) 
 {    
@@ -29,5 +29,3 @@ function dd($var)
      var_dump($var);
      exit;
 }
-// $arr = ['red', 'blue', 'green'];
-// dd($arr);
