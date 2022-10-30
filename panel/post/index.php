@@ -38,7 +38,7 @@
                             <th>#</th>
                             <th>image</th>
                             <th>title</th>
-                            <th>cat_id</th>
+                            <th>category</th>
                             <th>body</th>
                             <th>status</th>
                             <th>setting</th>
