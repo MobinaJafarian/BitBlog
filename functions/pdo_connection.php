@@ -6,7 +6,7 @@ $password = "";
 
 try {
   $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ);
-  $pdo = new PDO("mysql:host=$serverName;dbname=php_tutorial", $userName, $password, $options);
+  $pdo = new PDO("mysql:host=$serverName;dbname=bit-blog", $userName, $password, $options);
 
 //   $user->first_name
 //   $user['first_name']
